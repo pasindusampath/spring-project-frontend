@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assert/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="main-container">
+    <!--<form class="form">
+        <p class='field required'>
+            <label class='label required' for='parentName'>Parent Name</label>
+            <input class='text-input' id='parentName' name='parentName' required type='text' value='Parent Name'>
+        </p>
+
+    </form>-->
+    <form action='' class='form'>
+        <p class='field required'>
+            <label class='label required' for='name'>Full name</label>
+            <input class='text-input' id='name' name='name' required type='text' value='Use Tab'>
+        </p>
+        <p class='field required half'>
+            <label class='label' for='email'>E-mail</label>
+            <input class='text-input' id='email' name='email' required type='email'>
+        </p>
+        <p class='field half'>
+            <label class='label' for='phone'>Phone</label>
+            <input class='text-input' id='phone' name='phone' type='phone'>
+        </p>
+        <p class='field half required error'>
+            <label class='label' for='login'>Login</label>
+            <input class='text-input' id='login' name='login' required type='text' value='mican'>
+        </p>
+        <p class='field half required'>
+            <label class='label' for='password'>Password</label>
+            <input class='text-input' id='password' name='password' required type='password'>
+        </p>
+        <div class='field'>
+            <label class='label'>Sport?</label>
+            <ul class='checkboxes'>
+                <li class='checkbox'>
+                    <input class='checkbox-input' id='choice-0' name='choice' type='checkbox' value='0'>
+                    <label class='checkbox-label' for='choice-0'>Football</label>
+                </li>
+                <li class='checkbox'>
+                    <input class='checkbox-input' id='choice-1' name='choice' type='checkbox' value='1'>
+                    <label class='checkbox-label' for='choice-1'>Basketball</label>
+                </li>
+                <li class='checkbox'>
+                    <input class='checkbox-input' id='choice-2' name='choice' type='checkbox' value='2'>
+                    <label class='checkbox-label' for='choice-2'>Volleyball</label>
+                </li>
+                <li class='checkbox'>
+                    <input class='checkbox-input' id='choice-3' name='choice' type='checkbox' value='3'>
+                    <label class='checkbox-label' for='choice-3'>Golf</label>
+                </li>
+                <li class='checkbox'>
+                    <input class='checkbox-input' id='choice-4' name='choice' type='checkbox' value='4'>
+                    <label class='checkbox-label' for='choice-4'>Swimming</label>
+                </li>
+            </ul>
+        </div>
+        <div class='field'>
+            <label class='label'>Favourite JS framework</label>
+            <ul class='options'>
+                <li class='option'>
+                    <input class='option-input' id='option-0' name='option' type='radio' value='0'>
+                    <label class='option-label' for='option-0'>React</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-1' name='option' type='radio' value='1'>
+                    <label class='option-label' for='option-1'>Vue</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-2' name='option' type='radio' value='2'>
+                    <label class='option-label' for='option-2'>Angular</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-3' name='option' type='radio' value='3'>
+                    <label class='option-label' for='option-3'>Riot</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-4' name='option' type='radio' value='4'>
+                    <label class='option-label' for='option-4'>Polymer</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-5' name='option' type='radio' value='5'>
+                    <label class='option-label' for='option-5'>Ember</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-6' name='option' type='radio' value='6'>
+                    <label class='option-label' for='option-6'>Meteor</label>
+                </li>
+                <li class='option'>
+                    <input class='option-input' id='option-7' name='option' type='radio' value='7'>
+                    <label class='option-label' for='option-7'>Knockout</label>
+                </li>
+            </ul>
+        </div>
+        <p class='field'>
+            <label class='label' for='about'>About</label>
+            <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>
+        </p>
+        <p class='field half'>
+            <label class='label' for='select'>Position</label>
+            <select class='select' id='select'>
+                <option selected value=''></option>
+                <option value='ceo'>CEO</option>
+                <option value='front-end'>Front-end developer</option>
+                <option value='back-end'>Back-end developer</option>
+            </select>
+        </p>
+        <p class='field half'>
+            <input class='button' type='submit' value='Send'>
+        </p>
+    </form>
+
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="assert/script/magicFocus.js"></script>
+
+<script>
+    // ---------Responsive-navbar-active-animation-----------
+    function test(){
+        var tabsNewAnim = $('#navbarSupportedContent');
+        var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+        var activeItemNewAnim = tabsNewAnim.find('.active');
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+        var itemPosNewAnimTop = activeItemNewAnim.position();
+        var itemPosNewAnimLeft = activeItemNewAnim.position();
+        $(".hori-selector").css({
+            "top":itemPosNewAnimTop.top + "px",
+            "left":itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+        $("#navbarSupportedContent").on("click","li",function(e){
+            $('#navbarSupportedContent ul li').removeClass("active");
+            $(this).addClass('active');
+            var activeWidthNewAnimHeight = $(this).innerHeight();
+            var activeWidthNewAnimWidth = $(this).innerWidth();
+            var itemPosNewAnimTop = $(this).position();
+            var itemPosNewAnimLeft = $(this).position();
+            $(".hori-selector").css({
+                "top":itemPosNewAnimTop.top + "px",
+                "left":itemPosNewAnimLeft.left + "px",
+                "height": activeWidthNewAnimHeight + "px",
+                "width": activeWidthNewAnimWidth + "px"
+            });
+        });
+    }
+    $(document).ready(function(){
+        setTimeout(function(){ test(); });
+    });
+    $(window).on('resize', function(){
+        setTimeout(function(){ test(); }, 500);
+    });
+    $(".navbar-toggler").click(function(){
+        $(".navbar-collapse").slideToggle(300);
+        setTimeout(function(){ test(); });
+    });
+
+
+
+    // --------------add active class-on another-page move----------
+    jQuery(document).ready(function($){
+        // Get current path and find target link
+        var path = window.location.pathname.split("/").pop();
+
+        // Account for home page with empty path
+        if ( path == '' ) {
+            path = 'index.html';
+        }
+
+        var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
+        // Add active class to target link
+        target.parent().addClass('active');
+    });
+
+
+
+
+    // Add active class on another page linked
+    // ==========================================
+    // $(window).on('load',function () {
+    //     var current = location.pathname;
+    //     console.log(current);
+    //     $('#navbarSupportedContent ul li a').each(function(){
+    //         var $this = $(this);
+    //         // if the current path is like this link, make it active
+    //         if($this.attr('href').indexOf(current) !== -1){
+    //             $this.parent().addClass('active');
+    //             $this.parents('.menu-submenu').addClass('show-dropdown');
+    //             $this.parents('.menu-submenu').parent().addClass('active');
+    //         }else{
+    //             $this.parent().removeClass('active');
+    //         }
+    //     })
+    // });
+</script>
+</html>
