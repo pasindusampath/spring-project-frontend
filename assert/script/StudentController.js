@@ -22,7 +22,7 @@ class StudentController {
                 redirect: 'follow'
             };
 
-            fetch("http://192.168.8.106:8080/api/v1/student", requestOptions)
+            fetch("https://192.168.8.106:8080/api/v1/student", requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
