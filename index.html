@@ -17,11 +17,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Manage Students</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
@@ -47,112 +47,188 @@
         </p>
 
     </form>-->
-    <form action='' class='form'>
-        <p class='field required'>
-            <label class='label required' for='name'>Full name</label>
-            <input class='text-input' id='name' name='name' required type='text' value='Use Tab'>
-        </p>
-        <p class='field required half'>
-            <label class='label' for='email'>E-mail</label>
-            <input class='text-input' id='email' name='email' required type='email'>
-        </p>
-        <p class='field half'>
-            <label class='label' for='phone'>Phone</label>
-            <input class='text-input' id='phone' name='phone' type='phone'>
-        </p>
-        <p class='field half required error'>
-            <label class='label' for='login'>Login</label>
-            <input class='text-input' id='login' name='login' required type='text' value='mican'>
-        </p>
-        <p class='field half required'>
-            <label class='label' for='password'>Password</label>
-            <input class='text-input' id='password' name='password' required type='password'>
-        </p>
-        <div class='field'>
-            <label class='label'>Sport?</label>
-            <ul class='checkboxes'>
-                <li class='checkbox'>
-                    <input class='checkbox-input' id='choice-0' name='choice' type='checkbox' value='0'>
-                    <label class='checkbox-label' for='choice-0'>Football</label>
-                </li>
-                <li class='checkbox'>
-                    <input class='checkbox-input' id='choice-1' name='choice' type='checkbox' value='1'>
-                    <label class='checkbox-label' for='choice-1'>Basketball</label>
-                </li>
-                <li class='checkbox'>
-                    <input class='checkbox-input' id='choice-2' name='choice' type='checkbox' value='2'>
-                    <label class='checkbox-label' for='choice-2'>Volleyball</label>
-                </li>
-                <li class='checkbox'>
-                    <input class='checkbox-input' id='choice-3' name='choice' type='checkbox' value='3'>
-                    <label class='checkbox-label' for='choice-3'>Golf</label>
-                </li>
-                <li class='checkbox'>
-                    <input class='checkbox-input' id='choice-4' name='choice' type='checkbox' value='4'>
-                    <label class='checkbox-label' for='choice-4'>Swimming</label>
-                </li>
-            </ul>
+    <div>
+        <div class="form">
+            <h1 style="color: antiquewhite">Student Registration Details</h1>
         </div>
-        <div class='field'>
-            <label class='label'>Favourite JS framework</label>
-            <ul class='options'>
-                <li class='option'>
-                    <input class='option-input' id='option-0' name='option' type='radio' value='0'>
-                    <label class='option-label' for='option-0'>React</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-1' name='option' type='radio' value='1'>
-                    <label class='option-label' for='option-1'>Vue</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-2' name='option' type='radio' value='2'>
-                    <label class='option-label' for='option-2'>Angular</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-3' name='option' type='radio' value='3'>
-                    <label class='option-label' for='option-3'>Riot</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-4' name='option' type='radio' value='4'>
-                    <label class='option-label' for='option-4'>Polymer</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-5' name='option' type='radio' value='5'>
-                    <label class='option-label' for='option-5'>Ember</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-6' name='option' type='radio' value='6'>
-                    <label class='option-label' for='option-6'>Meteor</label>
-                </li>
-                <li class='option'>
-                    <input class='option-input' id='option-7' name='option' type='radio' value='7'>
-                    <label class='option-label' for='option-7'>Knockout</label>
-                </li>
-            </ul>
-        </div>
-        <p class='field'>
-            <label class='label' for='about'>About</label>
-            <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>
-        </p>
-        <p class='field half'>
-            <label class='label' for='select'>Position</label>
-            <select class='select' id='select'>
-                <option selected value=''></option>
-                <option value='ceo'>CEO</option>
-                <option value='front-end'>Front-end developer</option>
-                <option value='back-end'>Back-end developer</option>
-            </select>
-        </p>
-        <p class='field half'>
-            <input class='button' type='submit' value='Send'>
-        </p>
-    </form>
+        <form action='' class='form'>
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <label for="imageUpload"></label>
+                </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview" style="background-image: url(assert/img/profile.png);">
+                    </div>
+                </div>
+            </div>
+            <p class='field required'>
+                <label class='label required' for='name'>Full name</label>
+                <input class='text-input' id='name' name='name' required type='text' placeholder="Pasindu Sampath Bandara">
+            </p>
+            <p class='field required half'>
+                <label class='label' for='age'>Age</label>
+                <input class='text-input' id='age' name='age' required type='number'>
+            </p>
+            <p class='field half'>
+                <label class='label' for='phone'>Phone</label>
+                <input class='text-input' id='phone' name='phone' type='phone'>
+            </p>
+            <p class='field required'>
+                <label class='label required' for='name'>Guardian Full name</label>
+                <input class='text-input' id='guardianName' name='guardianName' required type='text' value=''>
+            </p>
+            <p class='field required half'>
+                <label class='label' for='address'>Address</label>
+                <input class='text-input' id='address' name='address' required type='text'>
+            </p>
+            <p class='field half'>
+                <label class='label' for='gphone'>Phone</label>
+                <input class='text-input' id='gphone' name='gphone' type='phone'>
+            </p>
+            <!--<p class='field half required error'>
+                <label class='label' for='login'>Login</label>
+                <input class='text-input' id='login' name='login' required type='text' value='mican'>
+            </p>
+            <p class='field half required'>
+                <label class='label' for='password'>Password</label>
+                <input class='text-input' id='password' name='password' required type='password'>
+            </p>-->
+            <!--<div class='field'>
+                <label class='label'>Sport?</label>
+                <ul class='checkboxes'>
+                    <li class='checkbox'>
+                        <input class='checkbox-input' id='choice-0' name='choice' type='checkbox' value='0'>
+                        <label class='checkbox-label' for='choice-0'>Football</label>
+                    </li>
+                    <li class='checkbox'>
+                        <input class='checkbox-input' id='choice-1' name='choice' type='checkbox' value='1'>
+                        <label class='checkbox-label' for='choice-1'>Basketball</label>
+                    </li>
+                    <li class='checkbox'>
+                        <input class='checkbox-input' id='choice-2' name='choice' type='checkbox' value='2'>
+                        <label class='checkbox-label' for='choice-2'>Volleyball</label>
+                    </li>
+                    <li class='checkbox'>
+                        <input class='checkbox-input' id='choice-3' name='choice' type='checkbox' value='3'>
+                        <label class='checkbox-label' for='choice-3'>Golf</label>
+                    </li>
+                    <li class='checkbox'>
+                        <input class='checkbox-input' id='choice-4' name='choice' type='checkbox' value='4'>
+                        <label class='checkbox-label' for='choice-4'>Swimming</label>
+                    </li>
+                </ul>
+            </div>
+            <div class='field'>
+                <label class='label'>Favourite JS framework</label>
+                <ul class='options'>
+                    <li class='option'>
+                        <input class='option-input' id='option-0' name='option' type='radio' value='0'>
+                        <label class='option-label' for='option-0'>React</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-1' name='option' type='radio' value='1'>
+                        <label class='option-label' for='option-1'>Vue</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-2' name='option' type='radio' value='2'>
+                        <label class='option-label' for='option-2'>Angular</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-3' name='option' type='radio' value='3'>
+                        <label class='option-label' for='option-3'>Riot</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-4' name='option' type='radio' value='4'>
+                        <label class='option-label' for='option-4'>Polymer</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-5' name='option' type='radio' value='5'>
+                        <label class='option-label' for='option-5'>Ember</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-6' name='option' type='radio' value='6'>
+                        <label class='option-label' for='option-6'>Meteor</label>
+                    </li>
+                    <li class='option'>
+                        <input class='option-input' id='option-7' name='option' type='radio' value='7'>
+                        <label class='option-label' for='option-7'>Knockout</label>
+                    </li>
+                </ul>
+            </div>-->
+            <!--<p class='field'>
+                <label class='label' for='about'>About</label>
+                <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>
+            </p>-->
+            <!--<p class='field half'>
+                <label class='label' for='select'>Position</label>
+                <select class='select' id='select'>
+                    <option selected value=''></option>
+                    <option value='ceo'>CEO</option>
+                    <option value='front-end'>Front-end developer</option>
+                    <option value='back-end'>Back-end developer</option>
+                </select>
+            </p>-->
+            <p class='field half'>
+                <input id="btnSave" class='button' type='submit' value='Send'>
+            </p>
+        </form>
+    </div>
 
+    <div>
+        <table class="container">
+            <thead>
+            <tr>
+                <th><h1>Sites</h1></th>
+                <th><h1>Views</h1></th>
+                <th><h1>Clicks</h1></th>
+                <th><h1>Average</h1></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Google</td>
+                <td>9518</td>
+                <td>6369</td>
+                <td>01:32:50</td>
+            </tr>
+            <tr>
+                <td>Twitter</td>
+                <td>7326</td>
+                <td>10437</td>
+                <td>00:51:22</td>
+            </tr>
+            <tr>
+                <td>Amazon</td>
+                <td>4162</td>
+                <td>5327</td>
+                <td>00:24:34</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+            </tr>
+            <tr>
+                <td>CodePen</td>
+                <td>2002</td>
+                <td>4135</td>
+                <td>00:46:19</td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td>4623</td>
+                <td>3486</td>
+                <td>00:31:52</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="assert/script/magicFocus.js"></script>
-
 <script>
     // ---------Responsive-navbar-active-animation-----------
     function test(){
@@ -195,10 +271,23 @@
         setTimeout(function(){ test(); });
     });
 
-
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imageUpload").change(function() {
+        readURL(this);
+    });
 
     // --------------add active class-on another-page move----------
-    jQuery(document).ready(function($){
+    /*jQuery(document).ready(function($){
         // Get current path and find target link
         var path = window.location.pathname.split("/").pop();
 
@@ -210,7 +299,7 @@
         var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
         // Add active class to target link
         target.parent().addClass('active');
-    });
+    });*/
 
 
 
@@ -233,4 +322,5 @@
     //     })
     // });
 </script>
+<script src="assert/script/StudentController.js"></script>
 </html>

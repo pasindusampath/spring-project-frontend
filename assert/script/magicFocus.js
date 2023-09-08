@@ -55,5 +55,5 @@ class magicFocus {
 window.magicFocus = new magicFocus(document.querySelector('.form'));
 
 $(() => {
-    $('.select').customSelect();
+    //$('.select').customSelect();
 });
