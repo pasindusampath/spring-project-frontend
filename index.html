@@ -7,38 +7,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="assert/style/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Manage Students</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
-                </li>
-            </ul>
+<div class="studentDetails">
+    <div class="cont">
+        <div class="student_img">
+            <img src="assert/img/profile.png">
         </div>
-    </nav>
+        <div class="details">
+            <h1>John Doe</h1>
+            <h2>Student</h2>
+            <h2>Age: 20</h2>
+            <h2>Phone: 1234567890</h2>
+            <h2>Guardian Name: John Doe</h2>
+            <h2>Guardian Phone: 1234567890</h2>
+            <h2>Address : 123 Main St</h2>
+        </div>
+    </div>
+    <div class="close">
+        <span class="material-symbols-outlined">
+            close
+        </span>
+    </div>
+</div>
+<div class="cover"></div>
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Manage Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div class="main-container">
     <!--<form class="form">
@@ -52,10 +80,10 @@
         <div class="form">
             <h1 style="color: antiquewhite">Student Registration Details</h1>
         </div>
-        <form action='' class='form'>
+        <form id="studentForm" class='form' enctype="multipart/form-data">
             <div class="avatar-upload">
                 <div class="avatar-edit">
-                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"/>
                     <label for="imageUpload"></label>
                 </div>
                 <div class="avatar-preview">
@@ -65,7 +93,8 @@
             </div>
             <p class='field required'>
                 <label class='label required' for='name'>Full name</label>
-                <input class='text-input' id='name' name='name' required type='text' placeholder="Pasindu Sampath Bandara">
+                <input class='text-input' id='name' name='name' required type='text'
+                       placeholder="Pasindu Sampath Bandara">
             </p>
             <p class='field required half'>
                 <label class='label' for='age'>Age</label>
@@ -171,54 +200,55 @@
                 </select>
             </p>-->
             <p class='field half'>
-                <input id="btnSave" class='button' type='submit' value='Send'>
+                <button id="btnSave" class='button' value='Send'>Save</button>
             </p>
         </form>
+
+
     </div>
 
     <div>
         <table class="container">
             <thead>
             <tr>
-                <th><h1>Sites</h1></th>
-                <th><h1>Views</h1></th>
-                <th><h1>Clicks</h1></th>
-                <th><h1>Average</h1></th>
+                <th><h1>Name</h1></th>
+                <th><h1>Age</h1></th>
+                <th><h1>Address</h1></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="studentData">
             <tr>
-                <td>Google</td>
+                <td style="display: none">Google</td>
                 <td>9518</td>
                 <td>6369</td>
                 <td>01:32:50</td>
             </tr>
             <tr>
-                <td>Twitter</td>
+                <td style="display: none">Twitter</td>
                 <td>7326</td>
                 <td>10437</td>
                 <td>00:51:22</td>
             </tr>
             <tr>
-                <td>Amazon</td>
+                <td style="display: none">Amazon</td>
                 <td>4162</td>
                 <td>5327</td>
                 <td>00:24:34</td>
             </tr>
             <tr>
-                <td>LinkedIn</td>
+                <td style="display: none">LinkedIn</td>
                 <td>3654</td>
                 <td>2961</td>
                 <td>00:12:10</td>
             </tr>
             <tr>
-                <td>CodePen</td>
+                <td style="display: none">CodePen</td>
                 <td>2002</td>
                 <td>4135</td>
                 <td>00:46:19</td>
             </tr>
             <tr>
-                <td>GitHub</td>
+                <td style="display: none">GitHub</td>
                 <td>4623</td>
                 <td>3486</td>
                 <td>00:31:52</td>
@@ -228,11 +258,12 @@
     </div>
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="assert/script/magicFocus.js"></script>
 <script>
     // ---------Responsive-navbar-active-animation-----------
-    function test(){
+    function test() {
         var tabsNewAnim = $('#navbarSupportedContent');
         var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
         var activeItemNewAnim = tabsNewAnim.find('.active');
@@ -241,12 +272,12 @@
         var itemPosNewAnimTop = activeItemNewAnim.position();
         var itemPosNewAnimLeft = activeItemNewAnim.position();
         $(".hori-selector").css({
-            "top":itemPosNewAnimTop.top + "px",
-            "left":itemPosNewAnimLeft.left + "px",
+            "top": itemPosNewAnimTop.top + "px",
+            "left": itemPosNewAnimLeft.left + "px",
             "height": activeWidthNewAnimHeight + "px",
             "width": activeWidthNewAnimWidth + "px"
         });
-        $("#navbarSupportedContent").on("click","li",function(e){
+        $("#navbarSupportedContent").on("click", "li", function (e) {
             $('#navbarSupportedContent ul li').removeClass("active");
             $(this).addClass('active');
             var activeWidthNewAnimHeight = $(this).innerHeight();
@@ -254,36 +285,44 @@
             var itemPosNewAnimTop = $(this).position();
             var itemPosNewAnimLeft = $(this).position();
             $(".hori-selector").css({
-                "top":itemPosNewAnimTop.top + "px",
-                "left":itemPosNewAnimLeft.left + "px",
+                "top": itemPosNewAnimTop.top + "px",
+                "left": itemPosNewAnimLeft.left + "px",
                 "height": activeWidthNewAnimHeight + "px",
                 "width": activeWidthNewAnimWidth + "px"
             });
         });
     }
-    $(document).ready(function(){
-        setTimeout(function(){ test(); });
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            test();
+        });
     });
-    $(window).on('resize', function(){
-        setTimeout(function(){ test(); }, 500);
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            test();
+        }, 500);
     });
-    $(".navbar-toggler").click(function(){
+    $(".navbar-toggler").click(function () {
         $(".navbar-collapse").slideToggle(300);
-        setTimeout(function(){ test(); });
+        setTimeout(function () {
+            test();
+        });
     });
 
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            reader.onload = function (e) {
+                $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
             }
             reader.readAsDataURL(input.files[0]);
         }
     }
-    $("#imageUpload").change(function() {
+
+    $("#imageUpload").change(function () {
         readURL(this);
     });
 
@@ -324,4 +363,16 @@
     // });
 </script>
 <script src="assert/script/StudentController.js"></script>
+<script>
+    $('.close').eq(0).click(()=>{
+        if($('.cover').css('display')=='flex'){
+            $('.cover').css('display','none');
+            $('.studentDetails').css('display','none');
+
+        }else {
+            $('.cover').css('display','flex');
+            $('.studentDetails').css('display','flex');
+        }
+    });
+</script>
 </html>
