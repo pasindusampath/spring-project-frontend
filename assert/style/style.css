@@ -578,21 +578,24 @@ h2 a {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-color:rebeccapurple;
+    background-color: rgba(0, 0, 0, 0.71);
     z-index: 4000;
-    width: 50%;
+    width: 65%;
     height: max-content;
+    display: none;
 
 }
 .studentDetails .cont{
     display: flex;
     justify-content: space-around;
+    padding: 18px;
+    width: 100%;
 }
 .cover{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
     position: fixed;
     left: 0;
     z-index: 3000;
@@ -600,6 +603,8 @@ h2 a {
 }
 .student_img img{
     width: 150px;
+    height: 150px;
+    border-radius: 100%;
 }
 .student_img{
     display: flex;
@@ -616,4 +621,254 @@ h2 a {
 }
 .close:hover{
     color: red;
+}
+.openPopup-btn {
+    background: #eee;
+    border: none;
+    color: #000;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4901960784);
+}
+.openPopup-btn:active {
+    box-shadow: 1px 1px 1px inset rgba(0, 0, 0, 0.4901960784);
+}
+
+.frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: rgba(52, 73, 94, 0);
+    color: #333;
+    z-index: 10000;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: none;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-popup {
+    position: relative;
+    overflow: hidden;
+    background: #dca2a2;
+    width: 300px;
+    padding: 10px 10px 58px 10px;
+    box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.2901960784);
+}
+.error-popup .ico-box {
+    text-align: center;
+    padding: 21px 0px;
+}
+.error-popup .ico-box svg {
+    height: 38px;
+}
+.error-popup .text-message {
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+}
+.error-popup .text-message h4 {
+    font-size: 16px;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+.error-popup .text-message p {
+    font-size: 14px;
+    color: #570000;
+    line-height: 20px;
+}
+.error-popup .dismiss-btn {
+    background: #e74c3c;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    line-height: 38px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 100ms ease-in-out;
+}
+.error-popup .dismiss-btn:hover {
+    background: #e53f2e;
+}
+.error-popup.pop-out {
+    transform: scale(0) translateY(-20px) rotateX(-90deg);
+    -webkit-animation: slideOut 600ms ease-out;
+    animation: slideOut 600ms ease-out;
+}
+.error-popup.pop-in {
+    transform: scale(1);
+    -webkit-animation: slideDown 600ms ease-out;
+    animation: slideDown 600ms ease-out;
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        transform: scale(1) translateY(-40px) rotateX(-40deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) translateY(20px) rotateX(20deg);
+        opacity: 0.6;
+        transform-origin: bottom center;
+    }
+    70% {
+        transform: scale(1) translateY(-10px) rotateX(-10deg);
+        opacity: 1;
+        transform-origin: top center;
+    }
+    100% {
+        transform: scale(1) translateY(0px) rotateX(0deg);
+        opacity: 1;
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: scale(1) translateY(-40px) rotateX(-40deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) translateY(20px) rotateX(20deg);
+        opacity: 0.6;
+        transform-origin: bottom center;
+    }
+    70% {
+        transform: scale(1) translateY(-10px) rotateX(-10deg);
+        opacity: 1;
+        transform-origin: top center;
+    }
+    100% {
+        transform: scale(1) translateY(0px) rotateX(0deg);
+        opacity: 1;
+        transform-origin: bottom center;
+    }
+}
+@-webkit-keyframes slideOut {
+    0% {
+        transform: scale(1) translateY(0px) rotateX(0deg);
+    }
+    50% {
+        transform: scale(1) translateY(20px) rotateX(0deg);
+    }
+    70% {
+        transform: scale(0.5) translateY(-50px) rotateX(-90deg);
+    }
+    100% {
+        transform: scale(0) translateY(-20px) rotateX(-90deg);
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: scale(1) translateY(0px) rotateX(0deg);
+    }
+    50% {
+        transform: scale(1) translateY(20px) rotateX(0deg);
+    }
+    70% {
+        transform: scale(0.5) translateY(-50px) rotateX(-90deg);
+    }
+    100% {
+        transform: scale(0) translateY(-20px) rotateX(-90deg);
+    }
+}
+.error-popup.pop-in .ico-box, .error-popup.pop-in .text-message h4, .error-popup.pop-in .text-message p {
+    -webkit-animation: jump 600ms ease-in;
+    animation: jump 600ms ease-in;
+}
+.error-popup.pop-in .ico-box {
+    -webkit-animation-delay: 170ms;
+    animation-delay: 170ms;
+}
+.error-popup.pop-in .text-message h4 {
+    -webkit-animation-delay: 160ms;
+    animation-delay: 160ms;
+}
+.error-popup.pop-in .text-message p {
+    -webkit-animation-delay: 130ms;
+    animation-delay: 130ms;
+}
+.error-popup.pop-in .popup-btn {
+    -webkit-animation: jumpBtn 600ms ease-out;
+    animation: jumpBtn 600ms ease-out;
+    -webkit-animation-delay: 100ms;
+    animation-delay: 100ms;
+}
+
+@-webkit-keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@-webkit-keyframes jumpBtn {
+    0% {
+        line-height: 38px;
+    }
+    50% {
+        line-height: 46px;
+    }
+    70% {
+        line-height: 32px;
+    }
+    100% {
+        line-height: 38px;
+    }
+}
+@keyframes jumpBtn {
+    0% {
+        line-height: 38px;
+    }
+    50% {
+        line-height: 46px;
+    }
+    70% {
+        line-height: 32px;
+    }
+    100% {
+        line-height: 38px;
+    }
 }

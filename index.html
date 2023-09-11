@@ -33,6 +33,37 @@
         </span>
     </div>
 </div>
+<div>
+    <div class="frame">
+        <div class="center">
+            <div class="error-popup pop-in">
+                <div class="ico-box">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="50.233px" height="45.581px" viewBox="97.266 3.753 50.233 45.581" enable-background="new 97.266 3.753 50.233 45.581"
+                         xml:space="preserve">
+				<g>
+					<path fill="#E74C3C" d="M144.888,49.334H99.877c-1.439,0-2.611-1.188-2.611-2.646c0-0.391,0.09-0.774,0.269-1.143
+						c3.613-7.409,9.705-17.984,15.08-27.313c2.832-4.916,5.507-9.56,7.447-13.101c1.005-1.838,3.637-1.838,4.643,0
+						c1.939,3.539,4.612,8.178,7.441,13.089c5.378,9.332,11.473,19.912,15.086,27.324c0.179,0.368,0.269,0.752,0.269,1.143
+						C147.499,48.146,146.328,49.334,144.888,49.334z"/>
+                    <g>
+						<path fill="#FFFFFF" d="M122.382,19.75c-0.781,0-1.616,0.588-1.616,0.929L121.767,37c0,0.341,0.275,0.616,0.616,0.616
+							s0.615-0.275,0.615-0.616l1.001-16.321C123.999,20.338,123.116,19.75,122.382,19.75z"/>
+                        <circle fill="#FFFFFF" cx="122.383" cy="40.695" r="1.241"/>
+					</g>
+				</g>
+				</svg>
+                </div>
+                <div class="text-message">
+                    <h4>Oh snap!</h4>
+                    <p>An error has occured while creating an error report.</p>
+                </div>
+                <button class="dismiss-btn">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="cover"></div>
 <nav class="navbar navbar-expand-custom navbar-mainbg">
     <a class="navbar-brand navbar-logo" href="#">Navbar</a>
@@ -77,7 +108,7 @@
 
     </form>-->
     <div>
-        <div class="form">
+        <div class="form" style="justify-content: center;">
             <h1 style="color: antiquewhite">Student Registration Details</h1>
         </div>
         <form id="studentForm" class='form' enctype="multipart/form-data">
@@ -373,6 +404,12 @@
             $('.cover').css('display','flex');
             $('.studentDetails').css('display','flex');
         }
+    });
+    $('.dismiss-btn').click(function(){
+        $('.error-popup').removeClass('pop-in');
+        $('.error-popup').addClass('pop-out');
+        $('.frame').eq(0).css('display', 'none');
+        $('.cover').css('display','none');
     });
 </script>
 </html>
